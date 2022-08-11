@@ -11,6 +11,10 @@
         {
         }
 
+        public DbSet<Article> Articles { get; init; }
+
+        public DbSet<Comment> Comments { get; init; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
