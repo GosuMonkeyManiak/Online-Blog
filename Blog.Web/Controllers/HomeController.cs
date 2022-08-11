@@ -2,6 +2,7 @@
 {
     using Blog.Web.Models;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
     using System.Diagnostics;
 
     public class HomeController : Controller
