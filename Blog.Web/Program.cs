@@ -1,6 +1,7 @@
 using Blog.Infrastructure.Data;
 using Blog.Infrastructure.Models;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,6 +16,7 @@ builder.Services
 
 builder.Services
     .AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<BlogDbContext>();
 
 builder.Services.AddControllersWithViews();
